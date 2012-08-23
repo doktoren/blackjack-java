@@ -1,10 +1,8 @@
-// WARNING: No error checking!
-//
-// 1 is ace, 10 is 10,knight,queen or king
-//
-// TODO: make it possible to attach listeners (used for sidegames)
-
-
+/**
+ *  WARNING: No error checking!
+ *  
+ *  1 is ace, 10 is 10,knight,queen or king
+ */
 import java.util.Random;
 
 public class BlackjackDecks {
@@ -65,14 +63,7 @@ public class BlackjackDecks {
 		++cards_left[value];
 		++cards_left[0];
 	}
-	
-	// HiLo card counting stuff. 52 is zero. result is in [0..104]
-	public int getBalance() {
-		return 52 - 52*(cards_left[2]+cards_left[3]+cards_left[4]+
-				cards_left[5]+cards_left[6]-cards_left[1]-cards_left[10]) / cards_left[0];
-		
-	}
-	
+
 	private int num_decks;
 	
 	// cards_left[0] is sum of cards_left[1..10]

@@ -1,39 +1,47 @@
+public class AarhusCasinoVariation extends BlackjackVariation {
 
-public class AarhusCasinoVariation implements BlackjackVariation {
+  @Override
+  public int numberOfDecks() {
+    return 6;
+  }
 
-    public int numberOfDecks() {
-    	return 6;
-    }
-   
-    public int deckPenetration() {
-    	return 60;
-    }
-    
-    public int maxSplits() {
-    	return 3;
-    }
-    
-    public boolean doubleAllowed(int cardSum) {
-    	return true;
-    }
-    
-    public boolean doubleAfterSplitAllowed() {
-    	return true;
-    }
+  @Override
+  public int deckPenetration() {
+    return 60;
+  }
 
-    public boolean dealerStandsOnSoft17() {
-    	return true;
-    }
-    
-    public int minBet() {
-    	return 50;
-    }
-    
-    public int maxBet() {
-    	return 2500;
-    }
-    
-    public int betStep() {
-    	return 50;
-    }
+  @Override
+  public int maxSplits() {
+    return 3;
+  }
+
+  @Override
+  public boolean doubleAllowed(int cardSum) {
+    return true;
+  }
+
+  @Override
+  public boolean doubleAfterSplitAllowed() {
+    return true;
+  }
+
+  @Override
+  public boolean dealerStandsOnSoft17() {
+    return true;
+  }
+
+  @Override
+  public int minBet() {
+    return 50;
+  }
+
+  @Override
+  public int maxBet() {
+    return 2500;
+  }
+
+  @Override
+  public int betStep() {
+    return 50;
+  }
 }

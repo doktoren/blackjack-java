@@ -1,3 +1,10 @@
+/**
+ * The simplest Blackjack strategy anyone should ever use at a casino unless
+ * they really want to lose money.
+ * Expected payback is 97.5% at Aarhus Casino.
+ * 
+ * @author Jesper Kristensen
+ */
 public class SimpleBlackjackStrategy implements BlackjackStrategy {
 
 	private BlackjackVariation variation;
@@ -9,7 +16,7 @@ public class SimpleBlackjackStrategy implements BlackjackStrategy {
 		this.variation = variation;
 	}
 	
-	public int bet(int capitalLeft) {
+	public int bet(int capitalLeft, BlackjackCardCounter cardCounter) {
 		return variation.minBet();
 	}
 	

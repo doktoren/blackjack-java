@@ -1,8 +1,7 @@
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class BlackjackDeal {
-	
-	
+
 	// Returns outcome (bet is 2)
 	public int deal(BlackjackDecks decks, BlackjackCardCounter counter,
 			BlackjackStrategy strategy) {

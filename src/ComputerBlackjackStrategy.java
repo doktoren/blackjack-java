@@ -1,8 +1,11 @@
-// This class plays perfect according to a simplified view on split:
-// No resplit is possible. Also, only one of the split hands receives cards.
-// The outcome of this hand is copied to the other hand.
-
-
+/**
+ * NOTE: The implementation of this class is not completed!
+ * And I don't remember in which state it was left...
+ * 
+ * This class plays perfect according to a simplified view on split:
+ * No resplit is possible. Also, only one of the split hands receives cards.
+ * The outcome of this hand is copied to the other hand.
+ */
 import java.util.Hashtable;
 
 public class ComputerBlackjackStrategy implements BlackjackStrategy {
@@ -18,9 +21,9 @@ public class ComputerBlackjackStrategy implements BlackjackStrategy {
 		this.c = c;
 	}
 	
-	public int bet(int capitalLeft) {
-		// Todo!
-		return 50;
+	public int bet(int capitalLeft, BlackjackCardCounter cardCounter) {
+		// TODO!
+		return variation.minBet();
 	}
 	
 	private boolean allow_split_during_init = true;

@@ -1,18 +1,24 @@
-public class BasicBlackjackStrategy implements BlackjackStrategy {
+/**
+ * A Blackjack strategy which can fairly easy be memorized.
+ * The strategy is probably the best weapon against Aarhus Casino
+ * which does not require any card counting.
+ * Simulations reveal a payback ratio of around 99.3%
+ */
+public class StaticBlackjackStrategy implements BlackjackStrategy {
 	
-	private BlackjackVariation variation;
+	protected BlackjackVariation variation;
 	
-	public BasicBlackjackStrategy(BlackjackVariation variation)
+	public StaticBlackjackStrategy(BlackjackVariation variation)
 	throws UnsupportedBlackjackVariationException {
 		if (variation.getClass().getCanonicalName().compareTo("AarhusCasinoVariation") != 0)
 			throw new UnsupportedBlackjackVariationException(this, variation);
 		this.variation = variation;
 	}
-	
-	public int bet(int capitalLeft) {
+
+	public int bet(int capitalLeft, BlackjackCardCounter cardCounter) {
 		return variation.minBet();
 	}
-	
+
 	public void init(int upcard, int card1, int card2) {}
 	
 	// split_choice[pair][upcard]
